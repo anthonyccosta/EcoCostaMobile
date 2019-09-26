@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EcoCostaMobile"
+             x:Class="EcoCostaMobile.MainPage"
+             BackgroundImage="degrade1">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Image Source="ecocostafuck"
+                   Margin="10,50,10,0"/>
+            <Entry x:Name="entrylogin"                   
+                   Placeholder="Digite seu login:" 
+                   HorizontalTextAlignment="Start" TextColor="White" FontSize="20"
+                   Margin="10,80,10,0"/>
+            <Entry x:Name="entrysenha"
+                   Placeholder="Digite sua senha:" TextColor="White" FontSize="20"
+                   HorizontalTextAlignment="Start" IsPassword="True"
+                   Margin="10"/>
+
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Login"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttonlogin"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+                <Button Text="Esqueceu a senha" HorizontalOptions="End" Margin="10,20,10,0" x:Name="buttonesqueceusenha"
+                        BackgroundColor="Transparent"
+                        BorderRadius="8"
+                        TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

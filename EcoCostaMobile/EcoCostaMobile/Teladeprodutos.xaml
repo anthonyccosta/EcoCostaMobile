@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Teladeprodutos"
+             BackgroundImage="degrade1">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="entryNomeproduto" Placeholder="Escolha o porduto:" HorizontalTextAlignment="Start" Margin="10,80,10,0" />
+            <Entry x:Name="entrycategoria" Placeholder="Escolha a categoria:" HorizontalTextAlignment="Start" Margin="10,80,10,0" />
+            <Entry x:Name="entryquantidadeproduto" Placeholder="Digite a quantia:" HorizontalTextAlignment="Start" Margin="10,80,10,0" />
+            <Entry x:Name="entryvalorunidade" Placeholder="Valor:" HorizontalTextAlignment="Start" Margin="10,80,10,0" />
+            <Entry x:Name="entryvalortotal" Placeholder="Valor Total:" HorizontalTextAlignment="Start" Margin="10,80,10,0" />
+            <Button Text="Avançar"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttonavancar"
+                        BackgroundColor="#20567c" BorderRadius="8" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
