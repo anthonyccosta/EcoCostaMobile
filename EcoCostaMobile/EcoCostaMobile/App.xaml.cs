@@ -11,7 +11,7 @@ namespace EcoCostaMobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new produtos();
         }
 
         protected override void OnStart()

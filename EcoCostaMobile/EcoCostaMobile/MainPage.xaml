@@ -7,7 +7,7 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <Image Source="ecocostafuck"
+            <Image Source="ecocosta"
                    Margin="10,50,10,0"/>
             <Entry x:Name="entrylogin"                   
                    Placeholder="Digite seu login:" 
@@ -24,7 +24,7 @@
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
-                <Button Text="Esqueceu a senha" HorizontalOptions="End" Margin="10,20,10,0" x:Name="buttonesqueceusenha"
+                <Button Text="Não tenho cadastro" HorizontalOptions="End" Margin="10,20,10,0" x:Name="buttonsemcadastro"
                         BackgroundColor="Transparent"
                         BorderRadius="8"
                         TextColor="White"/>
