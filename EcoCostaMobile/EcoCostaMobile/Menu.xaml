@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Menu">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <ContentPage.Content>
+                <StackLayout>
+                    <StackLayout BackgroundColor="#B3E3C6">
+                        <TableView Intent="Menu">
+                            <TableSection>
+                                <ViewCell x:Name="paginaclientes"
+                                          Tapped="Paginaclientes_Tapped">
+                                    <StackLayout>
+                                        <Label Text="Clientes" TextColor="White" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+
+                                <ViewCell x:Name="paginaprodutos"
+                                          Tapped="Paginaprodutos_Tapped">
+                                    <StackLayout>
+                                        <Label Text="Produtos" TextColor="White" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+
+                                <ViewCell x:Name="paginafornecedores"
+                                          Tapped="Paginafornecedores_Tapped">
+                                    <StackLayout>
+                                        <Label Text="Fornecedores" TextColor="White" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+
+                                <ViewCell x:Name="paginacategoria"
+                                          Tapped="Paginacategoria_Tapped">
+                                    <StackLayout>
+                                        <Label Text="Categoria" TextColor="White" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+                                
+                            </TableSection>
+                        </TableView>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
