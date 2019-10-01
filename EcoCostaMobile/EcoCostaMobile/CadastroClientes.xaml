@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.CadastroClientes"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="ecocosta"/>
+            <Entry x:Name="ID" Placeholder="ID" 
+                   HorizontalTextAlignment="Start" TextColor="White" FontSize="20" Margin="0,0,360,0" IsEnabled="False"/>
+
+            <Entry x:Name="nomecliente" Placeholder="Nome" HorizontalTextAlignment="Start"
+                   TextColor="White" FontSize="20" Margin="0,0,0,0"/>
+            
+            <Entry x:Name="CPF" Placeholder="CPF" TextColor="White" FontSize="20" 
+                   Margin="0,0,0,0" HorizontalOptions="StartAndExpand" IsEnabled="False"/>
+            
+            <Entry x:Name="RG" Placeholder="RG" TextColor="White" FontSize="20"
+                   Margin="0,0,0,0" HorizontalOptions="StartAndExpand" />
+            
+            <Entry x:Name="DataNascimento" Placeholder="Data Nascimento" TextColor="White" FontSize="20" 
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+            
+            <Entry x:Name="Sexo" Placeholder="Sexo" TextColor="White" FontSize="20" Margin="0,0,0,0"
+                   HorizontalOptions="Start"/>
+            
+            <Entry x:Name="TelefoneCelular" Placeholder="Telefone Celular" HorizontalOptions="FillAndExpand" TextColor="White" FontSize="20" 
+                   Margin="0,0,0,0"/>
+            
+            <Entry x:Name="TelefoneResidencial" Placeholder="Telefone Residencial" TextColor="White" FontSize="20" 
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+            
+            <Entry x:Name="Email" Placeholder="E-MAIL" TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+
+            <Entry x:Name="Rua" Placeholder="Rua" TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="Numero" Placeholder="N°" TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="Start"/>
+            <Entry x:Name="Bairro" Placeholder="Bairro" TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="CEP" Placeholder="CEP" TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="StartAndExpand"/>
+            <Entry x:Name="UF" Placeholder="Estado" TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="Start"/>
+            
+            <Button Text="Cadastrar Cliente"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttoncadastrarCliente"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+            <Button Text="Deletar Cliente"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttondelistarcliente"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+            <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttonListar"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

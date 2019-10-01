@@ -20,7 +20,8 @@ namespace EcoCostaMobile
 
         private void Paginaclientes_Tapped(object sender, EventArgs e)
         {
-
+            Detail = new NavigationPage(new CadastroClientes());
+            IsPresented = false;
         }
 
         private void Paginaprodutos_Tapped(object sender, EventArgs e)
