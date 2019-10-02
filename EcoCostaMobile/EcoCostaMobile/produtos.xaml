@@ -2,41 +2,56 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCostaMobile.produtos"
-             BackgroundColor="#71E3B8">
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout>
             <Image Source="ecocosta"/>
+            <Label Text="Cadastro de Produtos" FontSize="20" TextColor="Black" HorizontalTextAlignment="Center"/>
             <Entry x:Name="ID" Placeholder="ID" 
                    HorizontalTextAlignment="Start" TextColor="White" FontSize="20" Margin="0,0,360,0"/>
-            <StackLayout Orientation="Horizontal"/>
-            <Entry x:Name="escolherprodutos" Placeholder="Escolha o produto" HorizontalTextAlignment="Start"
-                   TextColor="White" FontSize="20" Margin="0,0,0,0"/>
-            <Entry x:Name="categoriaproduto" Placeholder="Categoria" TextColor="White" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="Start" IsEnabled="False"/>
-            <StackLayout/>
-            <Entry x:Name="descricaoproduto" Placeholder="Descrição do Produto" TextColor="White" FontSize="20"
+            <StackLayout Orientation="Horizontal">
+            <Entry x:Name="escolherprodutos" Placeholder="Escolha o produto:" HorizontalTextAlignment="Start"
+                   TextColor="White" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="categoriaproduto" Placeholder="Categoria:" TextColor="White" FontSize="20" 
+                   Margin="0,0,10,0" HorizontalOptions="Start"/>
+            </StackLayout>
+            <Entry x:Name="descricaoproduto" Placeholder="Descrição do Produto:" TextColor="White" FontSize="20"
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
-            <Entry x:Name="quantidadeproduto" Placeholder="Quantidade" TextColor="White" FontSize="20" 
+            <StackLayout Orientation="Horizontal">
+            <Entry x:Name="quantidadeproduto" Placeholder="Quantidade:" TextColor="White" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="Start" />
-            <Entry x:Name="fornecedor" Placeholder="Fornecedor" TextColor="White" FontSize="20" Margin="0,0,0,0"
+            <Entry x:Name="fornecedor" Placeholder="Fornecedor:" TextColor="White" FontSize="20" Margin="0,0,0,0"
                    HorizontalOptions="Start" IsEnabled="False"/>
-            <Entry x:Name="quantidadeunicaproduto" Placeholder="Unidade" TextColor="White" FontSize="20" 
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="quantidadeunicaproduto" Placeholder="Unidade:" TextColor="White" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="Start" />
-            <Entry x:Name="quantidadebrutaprodutos" Placeholder="Valor Total" TextColor="White" FontSize="20" 
+                <Entry x:Name="quantidadebrutaprodutos" Placeholder="Total:" TextColor="White" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="Start" />
-            <Button Text="Cadastrar Produto"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttonfinalizar"
-                        BackgroundColor="#20576c"
-                        BorderRadius="8"
-                        TextColor="White"/>
-            <Button Text="Deletar Produto"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttondeletarproduto"
-                        BackgroundColor="#20576c"
-                        BorderRadius="8"
-                        TextColor="White"/>
-            <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttonListar"
-                        BackgroundColor="#20576c"
-                        BorderRadius="8"
-                        TextColor="White"/>
+            </StackLayout>
 
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttonfinalizar"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+                    <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonatualizarproduto"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttondeletarproduto"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonListar"
+                        BackgroundColor="#20576c"
+                        BorderRadius="8"
+                        TextColor="White"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

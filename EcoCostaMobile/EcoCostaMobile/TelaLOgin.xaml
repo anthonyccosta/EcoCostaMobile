@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:EcoCostaMobile"
              x:Class="EcoCostaMobile.MainPage"
-             BackgroundImage="degrade1">
+             BackgroundImage="#C6F4D4">
     <ContentPage.Content>
 
         <StackLayout>
             <Image Source="ecocosta"
                    Margin="10,50,10,0"/>
             <Entry x:Name="entrylogin"                   
-                   Placeholder="Digite seu login:" 
-                   HorizontalTextAlignment="Start" TextColor="White" FontSize="20"
+                   Placeholder="Usuário:" 
+                   HorizontalTextAlignment="Start" TextColor="Black" FontSize="20"
                    Margin="10,80,10,0"/>
             <Entry x:Name="entrysenha"
-                   Placeholder="Digite sua senha:" TextColor="White" FontSize="20"
+                   Placeholder="Senha:" TextColor="Black" FontSize="20"
                    HorizontalTextAlignment="Start" IsPassword="True"
                    Margin="10"/>
 
@@ -23,11 +23,13 @@
                 <Button Text="Login"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttonlogin"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
-                        TextColor="White"/>
+                        TextColor="White"
+                        Clicked="Buttonlogin_Clicked"/>
                 <Button Text="Não tenho cadastro" HorizontalOptions="End" Margin="10,20,10,0" x:Name="buttonsemcadastro"
                         BackgroundColor="Transparent"
                         BorderRadius="8"
-                        TextColor="White"/>
+                        TextColor="Black"
+                        Clicked="Buttonsemcadastro_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -15,7 +15,7 @@ namespace EcoCostaMobile
 		public Menu ()
 		{
 			InitializeComponent ();
-            Detail = new NavigationPage(new MainPage());
+            Detail = new NavigationPage(new telaprincipal());
         }
 
         private void Paginaclientes_Tapped(object sender, EventArgs e)
@@ -32,12 +32,20 @@ namespace EcoCostaMobile
 
         private void Paginafornecedores_Tapped(object sender, EventArgs e)
         {
-
+            Detail = new NavigationPage(new Fornecedores());
+            IsPresented = false;
         }
 
         private void Paginacategoria_Tapped(object sender, EventArgs e)
         {
+            Detail = new NavigationPage(new Categoria());
+            IsPresented = false;
+        }
 
+        private void Paginasobre_Tapped(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new Sobre());
+            IsPresented = false;
         }
     }
 }

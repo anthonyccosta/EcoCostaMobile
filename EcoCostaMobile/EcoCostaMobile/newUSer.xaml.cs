@@ -10,12 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace EcoCostaMobile
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class produtos : ContentPage
+	public partial class newUSer : ContentPage
 	{
-		public produtos ()
+		public newUSer ()
 		{
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
-        }
+		}
 	}
 }

@@ -6,34 +6,41 @@
         <ContentPage Title="Menu">
             <ContentPage.Content>
                 <StackLayout>
-                    <StackLayout BackgroundColor="#B3E3C6">
+                    <StackLayout BackgroundColor="White">
                         <TableView Intent="Menu">
                             <TableSection>
                                 <ViewCell x:Name="paginaclientes"
                                           Tapped="Paginaclientes_Tapped">
                                     <StackLayout>
-                                        <Label Text="Clientes" TextColor="White" HorizontalTextAlignment="Center"/>
+                                        <Label Text="Clientes" TextColor="Black" FontSize="22" HorizontalTextAlignment="Center"/>
                                     </StackLayout>
                                 </ViewCell>
 
                                 <ViewCell x:Name="paginaprodutos"
                                           Tapped="Paginaprodutos_Tapped">
                                     <StackLayout>
-                                        <Label Text="Produtos" TextColor="White" HorizontalTextAlignment="Center"/>
+                                        <Label Text="Produtos" TextColor="Black" FontSize="22" HorizontalTextAlignment="Center"/>
                                     </StackLayout>
                                 </ViewCell>
 
                                 <ViewCell x:Name="paginafornecedores"
                                           Tapped="Paginafornecedores_Tapped">
                                     <StackLayout>
-                                        <Label Text="Fornecedores" TextColor="White" HorizontalTextAlignment="Center"/>
+                                        <Label Text="Fornecedores" TextColor="Black" FontSize="22" HorizontalTextAlignment="Center"/>
                                     </StackLayout>
                                 </ViewCell>
 
                                 <ViewCell x:Name="paginacategoria"
                                           Tapped="Paginacategoria_Tapped">
                                     <StackLayout>
-                                        <Label Text="Categoria" TextColor="White" HorizontalTextAlignment="Center"/>
+                                        <Label Text="Categoria" TextColor="Black" FontSize="22" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+
+                                <ViewCell x:Name="paginasobre"
+                                          Tapped="Paginasobre_Tapped">
+                                    <StackLayout>
+                                        <Label Text="Sobre" TextColor="Black" FontSize="22" HorizontalTextAlignment="Center"/>
                                     </StackLayout>
                                 </ViewCell>
                                 

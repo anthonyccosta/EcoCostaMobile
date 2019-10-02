@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Sobre">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Este app mobile é uma continuação de programção para a empresa EcoCosta!"
+                   Margin="20,50,20,10" FontSize="22"/>
+            <Button Text="Visite o site do Senac Botucatu" x:Name="buttonsitesenac" Clicked="Buttonsitesenac_Clicked"/>
+            <Button Text="Em breve" x:Name="buttonecocosta" Clicked="Buttonecocosta_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

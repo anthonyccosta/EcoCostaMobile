@@ -10,19 +10,78 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="TelaLOgin.xaml.cs">
+      <DependentUpon>TelaLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="produtos.xaml.cs">
+      <DependentUpon>Produtos.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="CadastroClientes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Categoria.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Fornecedores.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="produtos.xaml">
+    <EmbeddedResource Update="newUSer.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Produtos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Sobre.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="telaprincipal.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="CadastroClientes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Categoria.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Fornecedores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="newUSer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="produtos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Sobre.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="TelaLOgin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="telaprincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

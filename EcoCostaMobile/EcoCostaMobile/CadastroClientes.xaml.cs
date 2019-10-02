@@ -14,7 +14,28 @@ namespace EcoCostaMobile
 	{
 		public CadastroClientes ()
 		{
-			InitializeComponent ();
-		}
-	}
+			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private void ButtoncadastrarCliente_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buttonatualizarcliente_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buttondeletarcliente_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonListar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
