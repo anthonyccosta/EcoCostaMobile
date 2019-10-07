@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoCostaMobile.telaprincipal"
              BackgroundColor="White">
-    <ContentPage.Content>
+    <ContentPage.Content >
         <StackLayout>
             <Image Source="ecocosta"
                    Margin="10,50,10,0"/>

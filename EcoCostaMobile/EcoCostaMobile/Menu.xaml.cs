@@ -15,6 +15,7 @@ namespace EcoCostaMobile
 		public Menu ()
 		{
 			InitializeComponent ();
+            NavigationPage.SetHasNavigationBar(this, false);
             Detail = new NavigationPage(new telaprincipal());
         }
 

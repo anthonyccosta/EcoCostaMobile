@@ -14,7 +14,7 @@ namespace EcoCostaMobile
 	{
 		public telaprincipal ()
 		{
-			InitializeComponent ();
+            InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
         }
 	}

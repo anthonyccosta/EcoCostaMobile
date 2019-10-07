@@ -13,14 +13,15 @@
             <Entry x:Name="nomefornecedor" Placeholder="Nome:" HorizontalTextAlignment="Start"
                    TextColor="Black" FontSize="20" Margin="0,0,0,0"/>
 
+            <StackLayout Orientation="Horizontal">
             <Entry x:Name="CNPJ" Placeholder="CNPJ" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="StartAndExpand" />
-
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
             <Entry x:Name="datanascimento" Placeholder="Data de Nascimento:" TextColor="Black" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
 
             <Entry x:Name="sexo" Placeholder="Sexo:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="StartAndExpand" />
 
             <StackLayout Orientation="Horizontal">
             <Entry x:Name="TelefoneCelular" Placeholder="Telefone Celular:" TextColor="Black" FontSize="20" 
@@ -43,27 +44,27 @@
             <Entry x:Name="Bairro" Placeholder="Bairro:" TextColor="Black" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
             <Entry x:Name="CEP" Placeholder="CEP:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
-            <Entry x:Name="Estado" Placeholder="Estado:" TextColor="Black" FontSize="20" 
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+            <Entry x:Name="Estado" Placeholder="UF:" TextColor="Black" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-            <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttoncadastrarfornecedor"
+            <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttoncadastrarfornecedor"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
-            <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttonatualizarfornecedor"
+            <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonatualizarfornecedor"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-            <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttondeletarfornecedor"
+            <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttondeletarfornecedor"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
-            <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttonListar"
+            <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonListar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>

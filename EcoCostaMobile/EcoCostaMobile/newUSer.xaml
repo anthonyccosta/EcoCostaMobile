@@ -15,9 +15,9 @@
             
             <StackLayout Orientation="Horizontal">
         <Entry x:Name="senhaUsuario" Placeholder="Senha:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" IsPassword="True" />
             <Entry x:Name="confirmarsenhaUsuario" Placeholder="Confirmar senha:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" IsPassword="True" />
             </StackLayout>
 
             <Entry x:Name="emailUsuario" Placeholder="E-mail:" TextColor="Black" FontSize="20" 

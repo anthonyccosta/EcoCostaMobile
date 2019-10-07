@@ -13,21 +13,21 @@
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
 
             <StackLayout Orientation="Horizontal">
-            <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,10,0,0" x:Name="buttoncadastrarcategoria"
+            <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttoncadastrarcategoria"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
-            <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,10" x:Name="buttonatualizarcategoria"
+            <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonatualizarcategoria"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,10,0,0" x:Name="buttondeletarcategoria"
+                <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttondeletarcategoria"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>
-                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,10" x:Name="buttonListar"
+                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonListar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>

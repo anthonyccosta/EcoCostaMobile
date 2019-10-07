@@ -14,8 +14,9 @@ namespace EcoCostaMobile
 	{
 		public CadastroClientes ()
 		{
-			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            InitializeComponent();
+            
         }
 
         private void ButtoncadastrarCliente_Clicked(object sender, EventArgs e)
@@ -36,6 +37,11 @@ namespace EcoCostaMobile
         private void ButtonListar_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            labeldata.Text = "";
         }
     }
 }

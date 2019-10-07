@@ -16,16 +16,20 @@
 
             <StackLayout Orientation="Horizontal">
                 <Entry x:Name="CPF" Placeholder="CPF" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
                 <Entry x:Name="RG" Placeholder="RG" TextColor="Black" FontSize="20"
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric" />
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Entry x:Name="DataNascimento" Placeholder="Data Nascimento:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
-                <Entry x:Name="Sexo" Placeholder="Sexo:" TextColor="Black" FontSize="20" Margin="0,0,10,0"
-                   HorizontalOptions="Start"/>
+                <Label Text="Data Nascimento:" FontSize="20" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+                <DatePicker
+                    MinimumDate="01/01/1900"
+                    MaximumDate="01/01/2100"
+                    Format="dd/MM/yyyy"                    
+                    DateSelected="DatePicker_DateSelected" />
+                <Label x:Name="labeldata" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry x:Name="Sexo" Placeholder="Sexo:" TextColor="Black" FontSize="20" Margin="0,0,10,0" HorizontalOptions="Start"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -37,33 +41,37 @@
 
             <Entry x:Name="Email" Placeholder="E-MAIL:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
 
-            <Entry x:Name="Rua" Placeholder="Rua:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
             <StackLayout Orientation="Horizontal">
-                <Entry x:Name="Numero" Placeholder="N°" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="Start"/>
+            <Entry x:Name="Rua" Placeholder="Rua:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="Numero" Placeholder="N°" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal"> 
                 <Entry x:Name="Bairro" Placeholder="Bairro:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
                 <Entry x:Name="CEP" Placeholder="CEP" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
-            </StackLayout>
-            <Entry x:Name="UF" Placeholder="Estado:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="Start"/>
+               </StackLayout>
+            <Entry x:Name="UF" Placeholder="UF:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="Start"/>
+           
 
             <StackLayout Orientation="Horizontal">
-                <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttoncadastrarCliente"
+                <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttoncadastrarCliente"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"
                         Clicked="ButtoncadastrarCliente_Clicked"/>
-                <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttonatualizarcliente"
+                <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonatualizarcliente"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"
                         Clicked="Buttonatualizarcliente_Clicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttondeletarcliente"
+                <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttondeletarcliente"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"
                         Clicked="Buttondeletarcliente_Clicked"/>
-                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="buttonListar"
+                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonListar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"
