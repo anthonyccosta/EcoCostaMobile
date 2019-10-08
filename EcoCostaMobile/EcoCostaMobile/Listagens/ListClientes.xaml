@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Listagens.ListClientes">
+    <StackLayout>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout>
+                <ListView x:Name="listviewClientes">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Nome}">
+                                <TextCell.ContextActions>
+                                    <MenuItem Text="Atualizar"
+                                      x:Name="menuItemAtualizar"
+                                      CommandParameter="{Binding .}"
+                                      Clicked="MenuItemAtualizar_Clicked"/>
+                                    <MenuItem Text="Deletar"
+                                      x:Name="menuItemDeletar"                                      
+                                      CommandParameter="{Binding .}"
+                                      Clicked="MenuItemDeletar_Clicked"/>
+                                </TextCell.ContextActions>
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Adicionar" x:Name="buttonAdicionar" Clicked="ButtonAdicionar_Clicked"/>
+            <Button Text="Apagar tudo" x:Name="buttonApagartudo" Clicked="ButtonApagartudo_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

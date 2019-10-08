@@ -25,14 +25,54 @@ namespace EcoCostaMobile
 
             //criar tabela, se ela não existir
 
-            conexao.Execute("CREATE TABLE IF NOT EXISTS Clientes (ID INTENGER PRIMARY KEY AUTOINCREMENT, Nome(255) TEXT NOT NULL, CPF(11) INTENGER NOT NULL, RG(9) INTENGER NOT NULL, DataNascimento(8) TEXT NOT NULL, Sexo(10) TEXT NOT NULL, TelefoneCelular(11) INTENGER NOT NULL, TelefoneResidencial(11) INTENGER NOT NULL, Email(255) TEXT NOT NULL, Rua(255) TEXT NOT NULL, Bairro(100) TEXT NOT NULL, Numero(5) INTENGER NOT NULL, UF(2) TEXT NOT NULL, CEP(20) INTENGER NOT NULL)");
-            conexao.Execute("CREATE TABLE IF NOT EXISTS Produtos (ID INTENGER PRIMARY KEY AUTOINCREMENT, NomeProduto(255) TEXT NOT NULL, Categoria(100) TEXT NOT NULL, DescricaoProduto(255) TEXT NOT NULL, Fornecedores(255) TEXT NOT NULL, Unidade(5) INTENGER NOT NULL, Total(5) INTENGER NOT NULL)");
-            conexao.Execute("CREATE TABLE IF NOT EXISTS Categoria (ID INTENGER PRIMARY KEY AUTOINCREMENT, categoria(100) TEXT NOT NULL)");
-            conexao.Execute("CREATE TABLE IF NOT EXISTS Fornecedores (ID INTENGER PRIMARY KEY AUTOINCREMENT, NomeFornecedor(255) TEXT NOT NULL, CNPJ(14) INTENGER NOT NULL, DataNascimento(8) TEXT NOT NULL, Sexo(10) TEXT NOT NULL, TelefoneCelular(11) INTENGER NOT NULL, TelefoneResidencial(11) iNTENGER NOT NULL, Email(255) TEXT NOT NULL, Rua(255) TEXT NOT NULL, Bairro(100) TEXT NOT NULL, Numero(5) INTENGER NOT NULL, UF(2) TEXT NOT NULL, CEP(20) INTENGER NOT NULL)");
-            conexao.Execute("CREATE TABLE IF NOT EXISTS Usuarios (ID INTENGER PRIMARY KEY AUTOINCREMENT, Usuario(200) TEXT NOT NULL, senha(100) TEXT NOT NULL, confirmarsenha(100) TEXT NOT NULL, Email(255) TEXT NOT NULL)");
+            conexao.Execute("CREATE TABLE IF NOT EXISTS Clientes (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                                                                  "Nome TEXT(255) NOT NULL, " +
+                                                                  "CPF INTEGER(11) NOT NULL, " +
+                                                                  "RG INTEGER(9) NOT NULL, " +
+                                                                  "DataNascimento TEXT(8) NOT NULL, " +
+                                                                  "Sexo TEXT(10) NOT NULL, " +
+                                                                  "TelefoneCelular INTEGER(11) NOT NULL, " +
+                                                                  "TelefoneResidencial INTEGER(11) NOT NULL, " +
+                                                                  "Email TEXT(255) NOT NULL, " +
+                                                                  "Rua TEXT(255) NOT NULL, " +
+                                                                  "Bairro TEXT(100)  NOT NULL, " +
+                                                                  "Numero INTEGER(5) NOT NULL, " +
+                                                                  "UF TEXT(2) NOT NULL, " +
+                                                                  "CEP INTEGER(20) NOT NULL)");
+
+            conexao.Execute("CREATE TABLE IF NOT EXISTS Produtos (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                                                                  "NomeProduto TEXT(255) NOT NULL, " +
+                                                                  "Categoria TEXT(100) NOT NULL, " +
+                                                                  "DescricaoProduto TEXT(255)  NOT NULL, " +
+                                                                  "Fornecedores TEXT(255) NOT NULL, " +
+                                                                  "Unidade INTEGER(5) NOT NULL, " +
+                                                                  "Total INTEGER(5)  NOT NULL)");
+
+            conexao.Execute("CREATE TABLE IF NOT EXISTS Categoria (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                                                                   "categoria TEXT(100) NOT NULL)");
+
+            conexao.Execute("CREATE TABLE IF NOT EXISTS Fornecedores (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                                                                      "NomeFornecedor TEXT(255) NOT NULL, " +
+                                                                      "CNPJ INTEGER(14) NOT NULL, " +
+                                                                      "DataNascimento TEXT(8) NOT NULL, " +
+                                                                      "Sexo TEXT(10) NOT NULL, " +
+                                                                      "TelefoneCelular INTEGER(11) NOT NULL, " +
+                                                                      "TelefoneResidencial iNTEGER(11) NOT NULL, " +
+                                                                      "Email TEXT(255) NOT NULL, " +
+                                                                      "Rua TEXT(255) NOT NULL, " +
+                                                                      "Bairro TEXT(100) NOT NULL, " +
+                                                                      "Numero INTEGER(5)  NOT NULL, " +
+                                                                      "UF TEXT(2)  NOT NULL, " +
+                                                                      "CEP INTEGER(20) NOT NULL)");
+
+            conexao.Execute("CREATE TABLE IF NOT EXISTS Usuarios (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                                                                  "Usuario TEXT(200) NOT NULL, " +
+                                                                  "senha TEXT(100) NOT NULL, " +
+                                                                  "confirmarsenha TEXT(100) NOT NULL, " +
+                                                                  "Email TEXT(255) NOT NULL)");
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

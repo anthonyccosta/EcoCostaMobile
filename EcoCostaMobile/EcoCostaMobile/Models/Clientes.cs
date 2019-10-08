@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EcoCostaMobile.Models
 {
-    public class Clientes
+    public class clientes
     {
         public int ID { get; set; }
         public string Nome { get; set; }

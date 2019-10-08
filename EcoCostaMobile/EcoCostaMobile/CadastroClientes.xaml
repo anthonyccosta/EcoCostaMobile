@@ -22,13 +22,7 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Label Text="Data Nascimento:" FontSize="20" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-                <DatePicker
-                    MinimumDate="01/01/1900"
-                    MaximumDate="01/01/2100"
-                    Format="dd/MM/yyyy"                    
-                    DateSelected="DatePicker_DateSelected" />
-                <Label x:Name="labeldata" FontSize="20" HorizontalOptions="StartAndExpand"/>
+                <Entry x:Name="datanascimento" Placeholder="Data Nascimento" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="StartAndExpand"/>
                 <Entry x:Name="Sexo" Placeholder="Sexo:" TextColor="Black" FontSize="20" Margin="0,0,10,0" HorizontalOptions="Start"/>
             </StackLayout>
 
