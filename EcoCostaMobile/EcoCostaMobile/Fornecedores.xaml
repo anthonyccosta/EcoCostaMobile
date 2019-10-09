@@ -15,9 +15,9 @@
 
             <StackLayout Orientation="Horizontal">
             <Entry x:Name="CNPJ" Placeholder="CNPJ" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand"  Keyboard="Numeric"/>
             <Entry x:Name="datanascimento" Placeholder="Data de Nascimento:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
 
             <Entry x:Name="sexo" Placeholder="Sexo:" TextColor="Black" FontSize="20" 
@@ -25,9 +25,9 @@
 
             <StackLayout Orientation="Horizontal">
             <Entry x:Name="TelefoneCelular" Placeholder="Telefone Celular:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             <Entry x:Name="TelefoneResidencial" Placeholder="Telefone Residencial:" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
 
             <Entry x:Name="email" Placeholder="E-Mail:" TextColor="Black" FontSize="20" 
@@ -37,7 +37,7 @@
             <Entry x:Name="rua" Placeholder="Rua:" TextColor="Black" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
             <Entry x:Name="numero" Placeholder="N°" TextColor="Black" FontSize="20" 
-                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
+                   Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
             
             <StackLayout Orientation="Horizontal">
@@ -60,11 +60,7 @@
                         TextColor="White"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-            <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttondeletarfornecedor"
-                        BackgroundColor="#20576c"
-                        BorderRadius="8"
-                        TextColor="White"/>
-            <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonListar"
+            <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttonListar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"/>

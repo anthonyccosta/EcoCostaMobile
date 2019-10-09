@@ -5,29 +5,103 @@
     <StackLayout>
         <ScrollView Orientation="Horizontal">
             <StackLayout>
-                <ListView x:Name="listviewClientes">
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Text="ID" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Nome" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="2" Grid.Row="0" Text="CPF" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="3" Grid.Row="0" Text="RG" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="4" Grid.Row="0" Text="Nascimento" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="5" Grid.Row="0" Text="Sexo" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="6" Grid.Row="0" Text="Celular" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="7" Grid.Row="0" Text="Residencial" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="8" Grid.Row="0" Text="E-Mail" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="9" Grid.Row="0" Text="Rua" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="10" Grid.Row="0" Text="Bairro" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="11" Grid.Row="0" Text="N°" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="12" Grid.Row="0" Text="UF" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="13" Grid.Row="0" Text="CEP" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                </Grid>                
+                
+                <ListView x:Name="listviewClientes" BackgroundColor="White" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Nome}">
-                                <TextCell.ContextActions>
-                                    <MenuItem Text="Atualizar"
-                                      x:Name="menuItemAtualizar"
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Atualizar"                                              
+                                      x:Name="menuItemAtualizar"                                              
                                       CommandParameter="{Binding .}"
                                       Clicked="MenuItemAtualizar_Clicked"/>
                                     <MenuItem Text="Deletar"
                                       x:Name="menuItemDeletar"                                      
                                       CommandParameter="{Binding .}"
                                       Clicked="MenuItemDeletar_Clicked"/>
-                                </TextCell.ContextActions>
-                            </TextCell>
+                                </ViewCell.ContextActions>
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="250"/>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="80"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Text="{Binding ID}" TextColor="Black"/>
+                                    <Label Grid.Column="1" Text="{Binding Nome}" TextColor="Black"/>
+                                    <Label Grid.Column="2" Text="{Binding CPF}" TextColor="Black"/>
+                                    <Label Grid.Column="3" Text="{Binding RG}" TextColor="Black"/>
+                                    <Label Grid.Column="4" Text="{Binding DataNascimento}" TextColor="Black"/>
+                                    <Label Grid.Column="5" Text="{Binding Sexo}" TextColor="Black"/>
+                                    <Label Grid.Column="6" Text="{Binding TelefoneCelular}" TextColor="Black"/>
+                                    <Label Grid.Column="7" Text="{Binding TelefoneResidencial}" TextColor="Black"/>
+                                    <Label Grid.Column="8" Text="{Binding Email}" TextColor="Black"/>
+                                    <Label Grid.Column="9" Text="{Binding Rua}" TextColor="Black"/>
+                                    <Label Grid.Column="10" Text="{Binding Bairro}" TextColor="Black"/>
+                                    <Label Grid.Column="11" Text="{Binding Numero}" TextColor="Black"/>
+                                    <Label Grid.Column="12" Text="{Binding UF}" TextColor="Black"/>
+                                    <Label Grid.Column="13" Text="{Binding CEP}" TextColor="Black"/>
+                                </Grid>
+
+                                </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
         </ScrollView>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Adicionar" x:Name="buttonAdicionar" Clicked="ButtonAdicionar_Clicked"/>
-            <Button Text="Apagar tudo" x:Name="buttonApagartudo" Clicked="ButtonApagartudo_Clicked"/>
+            <Button Text="Adicionar" x:Name="buttonAdicionar" Clicked="ButtonAdicionar_Clicked" FontSize="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5" BorderRadius="10" TextColor="Black"/>          
+            <Button Text="Apagar tudo" x:Name="buttonApagartudo" Clicked="ButtonApagartudo_Clicked" FontSize="15" HorizontalOptions="FillAndExpand" Margin="10,10,10,5" BorderRadius="10" TextColor="Black"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

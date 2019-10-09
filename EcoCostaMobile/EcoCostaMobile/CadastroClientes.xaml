@@ -22,8 +22,15 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
-                <Entry x:Name="datanascimento" Placeholder="Data Nascimento" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="StartAndExpand"/>
-                <Entry x:Name="Sexo" Placeholder="Sexo:" TextColor="Black" FontSize="20" Margin="0,0,10,0" HorizontalOptions="Start"/>
+                <Entry x:Name="datanascimento" Placeholder="Data Nascimento" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+               
+                <Picker x:Name="pickersexo" Title="Sexo" TextColor="Black" Margin="10,0,10,0" HorizontalOptions="FillAndExpand" FontSize="20">
+                    <Picker.Items>
+                        <x:String>Masculino</x:String>
+                        <x:String>Feminino</x:String>
+                        <x:String>Outro</x:String>
+                    </Picker.Items>
+                </Picker>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -37,15 +44,21 @@
 
             <StackLayout Orientation="Horizontal">
             <Entry x:Name="Rua" Placeholder="Rua:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
-                <Entry x:Name="Numero" Placeholder="N°" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="Numero" Placeholder="N°" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
             </StackLayout>
             
             <StackLayout Orientation="Horizontal"> 
                 <Entry x:Name="Bairro" Placeholder="Bairro:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
                 <Entry x:Name="CEP" Placeholder="CEP" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
                </StackLayout>
-            <Entry x:Name="UF" Placeholder="UF:" TextColor="Black" FontSize="20" Margin="0,0,0,0" HorizontalOptions="Start"/>
-           
+            <Picker x:Name="pickerUF" Title="UF" TextColor="Black" Margin="10,0,10,0" HorizontalOptions="FillAndExpand" FontSize="20">
+                <Picker.Items>
+                    <x:String>SP</x:String>
+                    <x:String>MT</x:String>
+                    <x:String>SC</x:String>
+                </Picker.Items>
+            </Picker>
+
 
             <StackLayout Orientation="Horizontal">
                 <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttoncadastrarCliente"
@@ -60,12 +73,7 @@
                         Clicked="Buttonatualizarcliente_Clicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button Text="Deletar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttondeletarcliente"
-                        BackgroundColor="#20576c"
-                        BorderRadius="8"
-                        TextColor="White"
-                        Clicked="Buttondeletarcliente_Clicked"/>
-                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonListar"
+                <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttonListar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
                         TextColor="White"

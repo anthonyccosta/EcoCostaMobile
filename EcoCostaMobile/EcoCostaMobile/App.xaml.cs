@@ -27,7 +27,7 @@ namespace EcoCostaMobile
 
             conexao.Execute("CREATE TABLE IF NOT EXISTS Clientes (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                                                                   "Nome TEXT(255) NOT NULL, " +
-                                                                  "CPF INTEGER(11) NOT NULL, " +
+                                                                  "CPF BIGINTEGER(11) NOT NULL, " +
                                                                   "RG INTEGER(9) NOT NULL, " +
                                                                   "DataNascimento TEXT(8) NOT NULL, " +
                                                                   "Sexo TEXT(10) NOT NULL, " +
@@ -42,8 +42,9 @@ namespace EcoCostaMobile
 
             conexao.Execute("CREATE TABLE IF NOT EXISTS Produtos (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                                                                   "NomeProduto TEXT(255) NOT NULL, " +
-                                                                  "Categoria TEXT(100) NOT NULL, " +
+                                                                  "Categoria TEXT(100) NOT NULL, " +                                                                  
                                                                   "DescricaoProduto TEXT(255)  NOT NULL, " +
+                                                                  "Quantidade INTEGER(50) NOT NULL, " +
                                                                   "Fornecedores TEXT(255) NOT NULL, " +
                                                                   "Unidade INTEGER(5) NOT NULL, " +
                                                                   "Total INTEGER(5)  NOT NULL)");

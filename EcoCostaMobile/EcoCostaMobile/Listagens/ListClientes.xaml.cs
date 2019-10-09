@@ -18,26 +18,19 @@ namespace EcoCostaMobile.Listagens
         public ListClientes()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             CarregarInformacoes();
         }
 
-        private void CarregarInformacoes()
+        public void CarregarInformacoes()
         {
             var lista = cadastrocliente.SelectAll();
             listviewClientes.ItemsSource = lista;
         }
 
-        private void MenuItemAtualizar_Clicked(object sender, EventArgs e)
+        public void MenuItemAtualizar_Clicked(object sender, EventArgs e)
         {
-            //var mi = (MenuItem)sender;
-            //var model = (Clientes)mi.CommandParameter;
-
-            //bool resultadoUpdate = Clientes.Update(model.ID);
-            //if (resultadoUpdate == true)
-            //    DisplayAlert("SUCESSO", "Atualizado", "OK");
-            //else
-            //    DisplayAlert("ERRO", "Nâo foi possivel a atualização", "OK");
-            //CarregarInformacoes();
+            CarregarInformacoes();
         }
 
         private async void MenuItemDeletar_Clicked(object sender, EventArgs e)
@@ -65,7 +58,7 @@ namespace EcoCostaMobile.Listagens
 
         private void ButtonAdicionar_Clicked(object sender, EventArgs e)
         {
-            
+            Navigation.PushAsync(new CadastroClientes());
         }
 
         private async void ButtonApagartudo_Clicked(object sender, EventArgs e)

@@ -1,19 +1,18 @@
-﻿using System;
+﻿using EcoCostaMobile.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
-using EcoCostaMobile.Models;
 
 namespace EcoCostaMobile.ClassesCOD
-  
 {
-    public class Clientes
+    public class ProdutosS
     {
-        public List<clientes> SelectAll()
+        public List<Produtos> SelectAll()
         {
             try
             {
-                var itens = ((App)Application.Current).conexao.Query<clientes>("SELECT * FROM Clientes");
+                var itens = ((App)Application.Current).conexao.Query<Produtos>("SELECT * FROM Produtos");
                 return itens;
             }
             catch (Exception ex)
@@ -22,11 +21,11 @@ namespace EcoCostaMobile.ClassesCOD
             }
         }
 
-        public bool Inserir(string Nome, string CPF, string RG, string DataNascimento, Picker Sexo, string TelefoneCelular, string TelefoneResidencial, string Email, string Rua, string Bairro, string Numero, Picker Uf, string CEP)
+        public bool Inserir(string NomeProduto, string Categoria, string DescricaoProduto, string Quantidade, string Fornecedores, string Unidade, string Total)
         {
             try
             {
-                var query = $"INSERT INTO Clientes (Nome, CPF, RG, DataNascimento, Sexo, TelefoneCelular, TelefoneResidencial, Email, Rua, Bairro, Numero, UF, CEP) VALUES ('{Nome}', {CPF}, {RG}, '{DataNascimento}', '{Sexo}', {TelefoneCelular}, {TelefoneResidencial}, '{Email}', '{Rua}', '{Bairro}', {Numero}, '{Uf}', {CEP})";
+                var query = $"INSERT INTO Produtos (NomeProduto, Categoria, DescricaoProduto, Quantidade, Fornecedores, Unidade, Total) VALUES ('{NomeProduto}', '{Categoria}', '{DescricaoProduto}', {Quantidade}, '{Fornecedores}', {Unidade}, {Total})";
                 ((App)Application.Current).conexao.Execute(query);
 
                 return true;
@@ -37,11 +36,11 @@ namespace EcoCostaMobile.ClassesCOD
             }
         }
 
-        public bool Update(string Nome, string CPF, string RG, string DataNascimento, string Sexo, string TelefoneCelular, string TelefoneResidencial, string Email, string Rua, string Bairro, string Numero, string Uf, string CEP, int id)
+        public bool Update(string Produto, string Categoria, string Descricao, string Quantidade, string Fornecedores, string Unidade, string Total, int id)
         {
             try
             {
-                var query = $"UPDATE CLientes SET Nome = '{Nome}', CPF = {CPF}, RG = {RG}, DataNascimento = '{DataNascimento}', Sexo = '{Sexo}', TelefoneCelular = '{TelefoneCelular}', TelefoneResidencial = '{TelefoneResidencial}', Email = '{Email}', Rua = '{Rua}', Bairro = '{Bairro}', Numero = '{Numero}', UF = '{Uf}', CEP = '{CEP}' WHERE ID = {id}";
+                var query = $"UPDATE Produtos SET NomeProduto = '{Produto}', Categoria = '{Categoria}', DescricaoProduto = '{Descricao}', Quantidade = {Quantidade}, Fornecedores = '{Fornecedores}', Unidade = {Unidade}, Total = {Total} WHERE ID = {id}";
                 ((App)Application.Current).conexao.Execute(query);
 
                 return true;
@@ -56,7 +55,7 @@ namespace EcoCostaMobile.ClassesCOD
         {
             try
             {
-                var query = $"DELETE FROM Clientes";
+                var query = $"DELETE FROM Produtos";
                 ((App)Application.Current).conexao.Execute(query);
 
                 return true;
@@ -71,7 +70,7 @@ namespace EcoCostaMobile.ClassesCOD
         {
             try
             {
-                var query = $"DELETE FROM Clientes WHERE ID = {id}";
+                var query = $"DELETE FROM Produtos WHERE ID = {id}";
                 ((App)Application.Current).conexao.Execute(query);
 
                 return true;
@@ -81,5 +80,5 @@ namespace EcoCostaMobile.ClassesCOD
                 throw new Exception("Houve um erro ao Deletar\nDetalhes:" + ex.Message);
             }
         }
-    }    
+    }
 }

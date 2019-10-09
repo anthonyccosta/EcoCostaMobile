@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Listagens.ListarProdutos">
+    <StackLayout>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout>
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Text="ID" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Produto" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="2" Grid.Row="0" Text="Categoria" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="3" Grid.Row="0" Text="Descrição" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="4" Grid.Row="0" Text="Quantidade" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="5" Grid.Row="0" Text="Fornecedor" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="6" Grid.Row="0" Text="Unidade" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="7" Grid.Row="0" Text="Total" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                </Grid>
+
+                <ListView x:Name="listviewProduto" BackgroundColor="White" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Atualizar"
+                                              x:Name="menuItemAtualizarProduto"
+                                              CommandParameter="{Binding .}"
+                                              Clicked="MenuItemAtualizarProduto_Clicked"/>
+                                    <MenuItem Text="Deletar"
+                                              x:Name="menuItemDeletarrProduto"
+                                              CommandParameter="{Binding .}"
+                                              Clicked="MenuItemDeletarrProduto_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Text="{Binding ID}" TextColor="Black"/>
+                                    <Label Grid.Column="1" Text="{Binding NomeProduto}" TextColor="Black"/>
+                                    <Label Grid.Column="2" Text="{Binding Categoria}" TextColor="Black"/>
+                                    <Label Grid.Column="3" Text="{Binding DescricaoProduto}" TextColor="Black"/>
+                                    <Label Grid.Column="4" Text="{Binding Quantidade}" TextColor="Black"/>
+                                    <Label Grid.Column="5" Text="{Binding Fornecedores}" TextColor="Black"/>
+                                    <Label Grid.Column="6" Text="{Binding Unidade}" TextColor="Black"/>
+                                    <Label Grid.Column="7" Text="{Binding Total}" TextColor="Black"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Adicionar" x:Name="buttonaddProduto" Clicked="ButtonaddProduto_Clicked" FontSize="15"  BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+            <Button Text="Deletar" x:Name="buttondeletartudoProduto" Clicked="ButtondeletartudoProduto_Clicked" FontSize="15"  BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
