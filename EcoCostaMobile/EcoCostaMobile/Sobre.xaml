@@ -4,7 +4,7 @@
              x:Class="EcoCostaMobile.Sobre">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Este app mobile é uma continuação de programção para a empresa EcoCosta!"
+            <Label Text="Este app mobile é uma continuação de programação para a empresa EcoCosta!"
                    Margin="20,50,20,10" FontSize="22"/>
             <Button Text="Visite o site do Senac Botucatu" x:Name="buttonsitesenac" Clicked="Buttonsitesenac_Clicked"/>
             <Button Text="Em breve" x:Name="buttonecocosta" Clicked="Buttonecocosta_Clicked"/>

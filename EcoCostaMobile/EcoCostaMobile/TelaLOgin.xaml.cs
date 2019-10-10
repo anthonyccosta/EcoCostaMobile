@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoCostaMobile.ClassesCOD;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,9 +28,19 @@ namespace EcoCostaMobile
             {
                 DisplayAlert("Ops..", "Não deixe os campos em branco", "Ok");
             }
-            else if (entrylogin.Text == "adm" && entrysenha.Text == "adm")
+            else 
             {
-                Navigation.PushAsync(new Menu());
+                novoUSER user = new novoUSER();
+                bool resultadologin = user.Login(entrylogin.Text, entrysenha.Text);
+
+                if (resultadologin == true)
+                {
+                    Navigation.PushAsync(new Menu());
+                }
+                else
+                {
+                    DisplayAlert("Erro", "Usuario ou senha incorretos", "Tente Novamente");
+                }
             }
         }
     }

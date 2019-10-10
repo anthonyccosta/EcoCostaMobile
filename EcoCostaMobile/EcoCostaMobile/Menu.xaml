@@ -37,6 +37,13 @@
                                     </StackLayout>
                                 </ViewCell>
 
+                                <ViewCell x:Name="paginausuarios"
+                                          Tapped="Paginausuarios_Tapped">
+                                    <StackLayout>
+                                        <Label Text="Usuarios" TextColor="Black" FontSize="22" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+
                                 <ViewCell x:Name="paginasobre"
                                           Tapped="Paginasobre_Tapped">
                                     <StackLayout>

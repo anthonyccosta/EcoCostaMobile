@@ -44,7 +44,7 @@ namespace EcoCostaMobile
                                                           TelefoneResidencial.Text, Email.Text, Rua.Text, Bairro.Text, Numero.Text, pickerUF, CEP.Text);
                 if (resultadocadastro == true)
                 {
-                    DisplayAlert("SUCESSO", "Clientes Cadastrado com Sucesso", "OK");
+                    DisplayAlert("SUCESSO", "Cliente Cadastrado com Sucesso", "OK");
                     nomecliente.Text = "";
                     CPF.Text = "";
                     RG.Text = "";
@@ -57,7 +57,7 @@ namespace EcoCostaMobile
                     Bairro.Text = "";
                     CEP.Text = "";
 
-                    DisplayAlert("Atenção", "Para verificar se o clientes foi cadastrado com sucesso, vá até a tela de listagem.", "OK");
+                    DisplayAlert("Atenção", "Para verificar se o cliente foi cadastrado com sucesso, vá até a tela de listagem.", "OK");
                 }
                 else
                 {

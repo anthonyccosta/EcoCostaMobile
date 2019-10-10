@@ -74,8 +74,8 @@
             </StackLayout>
         </ScrollView>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Adicionar" x:Name="buttonaddProduto" Clicked="ButtonaddProduto_Clicked" FontSize="15"  BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
-            <Button Text="Deletar" x:Name="buttondeletartudoProduto" Clicked="ButtondeletartudoProduto_Clicked" FontSize="15"  BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+            <Button Text="Adicionar" x:Name="buttonaddProduto" Clicked="ButtonaddProduto_Clicked" FontSize="15"  HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+            <Button Text="Apagar tudo" x:Name="buttondeletartudoProduto" Clicked="ButtondeletartudoProduto_Clicked" FontSize="15" HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -1,21 +1,21 @@
-﻿using EcoCostaMobile.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EcoCostaMobile.ClassesCOD;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EcoCostaMobile.ClassesCOD;
+using EcoCostaMobile.Models;
 
 namespace EcoCostaMobile.Listagens
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListarProdutos : ContentPage
+	public partial class ListarCategoria : ContentPage
 	{
-        protected ProdutosS produtoss = new ProdutosS();
-		public ListarProdutos ()
+        protected categoriA users = new categoriA();
+        public ListarCategoria ()
 		{
 			InitializeComponent ();
             CarregarInformacoes();
@@ -23,26 +23,26 @@ namespace EcoCostaMobile.Listagens
 
         public void CarregarInformacoes()
         {
-            var lista = produtoss.SelectAll();
-            listviewProduto.ItemsSource = lista;
+            var lista = users.SelectAll();
+            listviewCategorias.ItemsSource = lista;
         }
 
-        private void MenuItemAtualizarProduto_Clicked(object sender, EventArgs e)
+        private void MenuatualizarUnicaCategoria_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private async void MenuItemDeletarrProduto_Clicked(object sender, EventArgs e)
+        private async void MenudeletarUnicaCategoria_Clicked(object sender, EventArgs e)
         {
-            var resposta = await DisplayAlert("Confirmação", "Tem certeza de que deseja deletar este Produto?", "SIM", "NÃO");
+            var resposta = await DisplayAlert("Confirmação", "Tem certeza de que deseja deletar esta Categoria?", "SIM", "NÃO");
             if (resposta == true)
             {
                 try
                 {
                     var mi = (MenuItem)sender;
-                    var model = (Produtos)mi.CommandParameter;
-                    var resultadoDeletaItem = produtoss.DeleteItem(model.ID);
-                    if (resultadoDeletaItem == true)
+                    var model = (CategoriA)mi.CommandParameter;
+                    var resultadoDeleteItemCategoria = users.DeleteItemCategoria(model.ID);
+                    if (resultadoDeleteItemCategoria == true)
                         await DisplayAlert("Sucesso", "Item Deletado", "OK");
                     else
                         await DisplayAlert("ERRO", "Houve um Erro", "OK");
@@ -55,21 +55,21 @@ namespace EcoCostaMobile.Listagens
             CarregarInformacoes();
         }
 
-        private void ButtonaddProduto_Clicked(object sender, EventArgs e)
+        private void ButtonaddCategoria_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new produtos());
+            Navigation.PushAsync(new Categoria());
         }
 
-        private async void ButtondeletartudoProduto_Clicked(object sender, EventArgs e)
+        private async void ButtondeletartodaCategoria_Clicked(object sender, EventArgs e)
         {
             var resposta = await DisplayAlert("Confirmação", "Tem certeza de que deseja deletar tudo?", "SIM", "NÃO");
             if (resposta == true)
             {
                 try
                 {
-                    var resultadoDeletaAll = produtoss.DeleteAll();
+                    var DeletartodasCategorias = users.DeletartodasCategorias();
 
-                    if (resultadoDeletaAll == true)
+                    if (DeletartodasCategorias == true)
                     {
                         await DisplayAlert("Sucesso", "Deletado", "OK");
                     }

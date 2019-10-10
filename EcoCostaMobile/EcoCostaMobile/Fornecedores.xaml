@@ -53,17 +53,17 @@
             <Button Text="Cadastrar"  HorizontalOptions="FillAndExpand" Margin="10,0,0,0" x:Name="buttoncadastrarfornecedor"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
-                        TextColor="White"/>
+                        TextColor="White" Clicked="Buttoncadastrarfornecedor_Clicked"/>
             <Button Text="Atualizar"  HorizontalOptions="FillAndExpand" Margin="0,0,10,0" x:Name="buttonatualizarfornecedor"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
-                        TextColor="White"/>
+                        TextColor="White" Clicked="Buttonatualizarfornecedor_Clicked"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
             <Button Text="Listar"  HorizontalOptions="FillAndExpand" Margin="10,0,10,0" x:Name="buttonListar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
-                        TextColor="White"/>
+                        TextColor="White" Clicked="ButtonListar_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

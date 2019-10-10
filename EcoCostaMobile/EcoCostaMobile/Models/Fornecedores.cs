@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EcoCostaMobile.Models
 {
-    public class Fornecedores
+    public class FornecedoreS
     {
         public int ID { get; set; }
         public string NomeFornecedor { get; set; }
@@ -17,7 +17,7 @@ namespace EcoCostaMobile.Models
         public string Rua { get; set; }
         public string Bairro { get; set; }
         public string Numero { get; set; }
-        public string Uf { get; set; }
+        public string UF { get; set; }
         public string CEP { get; set; }
     }
 }

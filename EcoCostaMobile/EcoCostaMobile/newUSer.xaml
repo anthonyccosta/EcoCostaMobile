@@ -23,10 +23,10 @@
             <Entry x:Name="emailUsuario" Placeholder="E-mail:" TextColor="Black" FontSize="20" 
                    Margin="0,0,0,0" HorizontalOptions="FillAndExpand" />
 
-            <Button Text="Cadastrar Usuário"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttonfinalizar"
+                <Button Text="Cadastrar Usuário"  HorizontalOptions="FillAndExpand" Margin="10,20,10,0" x:Name="buttonfinalizar"
                         BackgroundColor="#20576c"
                         BorderRadius="8"
-                        TextColor="White"/>
-        </StackLayout>
+                        TextColor="White" Clicked="Buttonfinalizar_Clicked"/>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

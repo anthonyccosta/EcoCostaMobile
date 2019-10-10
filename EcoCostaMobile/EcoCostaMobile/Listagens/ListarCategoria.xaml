@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Listagens.ListarCategoria">
+    <StackLayout>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout>
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Text="ID" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Categoria" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                </Grid>
+
+                <ListView x:Name="listviewCategorias" BackgroundColor="White" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Atualizar"
+                                              x:Name="menuatualizarUnicaCategoria"
+                                              CommandParameter="{Binding .}"
+                                              Clicked="MenuatualizarUnicaCategoria_Clicked"/>
+                                    <MenuItem Text="Deletar"
+                                              x:Name="menudeletarUnicaCategoria"
+                                              CommandParameter="{Binding .}"
+                                              Clicked="MenudeletarUnicaCategoria_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="150"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Text="{Binding ID}" TextColor="Black"/>
+                                    <Label Grid.Column="1" Text="{Binding Categoria}" TextColor="Black"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Adicionar" x:Name="buttonaddCategoria" Clicked="ButtonaddCategoria_Clicked" FontSize="15"  HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+            <Button Text="Apagar tudo" x:Name="buttondeletartodaCategoria" Clicked="ButtondeletartodaCategoria_Clicked" FontSize="15" HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

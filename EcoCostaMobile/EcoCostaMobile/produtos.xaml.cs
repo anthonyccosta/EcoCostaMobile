@@ -44,7 +44,7 @@ namespace EcoCostaMobile
                                                           quantidadebrutaprodutos.Text);
                 if (resultadocadastro == true)
                 {
-                    DisplayAlert("SUCESSO", "Clientes Cadastrado com Sucesso", "OK");
+                    DisplayAlert("SUCESSO", "Produto Cadastrado com Sucesso", "OK");
                     escolherprodutos.Text = "";
                     categoriaproduto.Text = "";
                     descricaoproduto.Text = "";
@@ -53,7 +53,7 @@ namespace EcoCostaMobile
                     quantidadeunicaproduto.Text = "";
                     quantidadebrutaprodutos.Text = "";
 
-                    DisplayAlert("Atenção", "Para verificar se o clientes foi cadastrado com sucesso, vá até a tela de listagem.", "OK");
+                    DisplayAlert("Atenção", "Para verificar se o Produto foi cadastrado com sucesso, vá até a tela de listagem.", "OK");
                 }
                 else
                 {

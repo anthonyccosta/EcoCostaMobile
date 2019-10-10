@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoCostaMobile.Listagens.Listarfornecedores">
+    <StackLayout>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout>
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Text="ID" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Fornecedor" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="2" Grid.Row="0" Text="CNPJ" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="3" Grid.Row="0" Text="Data Nascimento" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="4" Grid.Row="0" Text="Sexo" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="5" Grid.Row="0" Text="Telefone Celular" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="6" Grid.Row="0" Text="Telefone Residencial" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="7" Grid.Row="0" Text="Email" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="8" Grid.Row="0" Text="Rua" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="9" Grid.Row="0" Text="Bairro" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="10" Grid.Row="0" Text="Numero" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="11" Grid.Row="0" Text="UF" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                    <Label Grid.Column="12" Grid.Row="0" Text="CEP" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+                </Grid>
+
+                <ListView x:Name="listviewFornecedor" BackgroundColor="White" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Atualizar"
+                                              x:Name="menuItemAtualizarFornecedor"
+                                              CommandParameter="{Binding .}"
+                                              Clicked="MenuItemAtualizarFornecedor_Clicked"/>
+                                    <MenuItem Text="Deletar"
+                                              x:Name="menuItemDeletarFornecedor"
+                                              CommandParameter="{Binding .}"
+                                              Clicked="MenuItemDeletarFornecedor_Clicked"/>
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Text="{Binding ID}" TextColor="Black"/>
+                                    <Label Grid.Column="1" Text="{Binding NomeFornecedor}" TextColor="Black"/>
+                                    <Label Grid.Column="2" Text="{Binding CNPJ}" TextColor="Black"/>
+                                    <Label Grid.Column="3" Text="{Binding DataNascimento}" TextColor="Black"/>
+                                    <Label Grid.Column="4" Text="{Binding Sexo}" TextColor="Black"/>
+                                    <Label Grid.Column="5" Text="{Binding TelefoneCelular}" TextColor="Black"/>
+                                    <Label Grid.Column="6" Text="{Binding TelefoneResidencial}" TextColor="Black"/>
+                                    <Label Grid.Column="7" Text="{Binding Email}" TextColor="Black"/>
+                                    <Label Grid.Column="8" Text="{Binding Rua}" TextColor="Black"/>
+                                    <Label Grid.Column="9" Text="{Binding Bairro}" TextColor="Black"/>
+                                    <Label Grid.Column="10" Text="{Binding Numero}" TextColor="Black"/>
+                                    <Label Grid.Column="11" Text="{Binding UF}" TextColor="Black"/>
+                                    <Label Grid.Column="12" Text="{Binding CEP}" TextColor="Black"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Adicionar" x:Name="buttonaddFornecedor" Clicked="ButtonaddFornecedor_Clicked" FontSize="15"  HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+            <Button Text="Apagar tudo" x:Name="buttondeletartudoFornecedor" Clicked="ButtondeletartudoFornecedor_Clicked" FontSize="15" HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Black" Margin="10,10,10,5"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

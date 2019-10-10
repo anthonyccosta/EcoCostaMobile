@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EcoCostaMobile.Listagens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,12 @@ namespace EcoCostaMobile
         private void Paginasobre_Tapped(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new Sobre());
+            IsPresented = false;
+        }
+
+        private void Paginausuarios_Tapped(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new ListarUsers());
             IsPresented = false;
         }
     }
